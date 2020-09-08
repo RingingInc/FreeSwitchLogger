@@ -38,7 +38,7 @@ done
 
 while true
 do
-  RESULT=`fsesexe -h $HOSTS -x "show status" | grep "Sec out of max" | cut -d ' ' -f 1,8,10`
+  RESULT=`fsesexe -h $HOSTS -x "show status" | grep "Sec out of max" | cut -d ' ' -f 1,8,13`
   index=0
   SESSIONS=()
   for v in $RESULT
