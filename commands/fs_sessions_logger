@@ -46,7 +46,7 @@ do
     SESSIONS[$index]=`echo $v | sed "s/,//"`
     let index=index+1
   done
-  printf "`date +"%Y-%m-%d %H:%M:%S",%d,%d,%d` $SESSIONS[0] $SESSIONS[1] $SESSIONS[2]\n" | tee -a $OUTPUT_FILE
+  printf "`date +"%Y-%m-%d %H:%M:%S"`,%d,%d,%d\n" ${SESSIONS[0]} ${SESSIONS[1]} ${SESSIONS[2]} | tee -a $OUTPUT_FILE
   sleep $INTERVAL
 done
 
